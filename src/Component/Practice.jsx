@@ -2,7 +2,7 @@
 //! 1 
 // import { Component } from "react";
 
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { Component, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 //  export default class Peactice extends Component{
 
@@ -429,4 +429,187 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 // }
 
 // export default Practice
+
+
+
+// ! 1
+
+// import React, { Component } from 'react'
+
+// export default class Practice extends Component {
+//   constructor(){
+//     super();
+//     this.state = {
+//       name:1
+//     }
+
+//   }
+  
+//   render() {
+    
+//     return (
+//       <div>
+//         <h1>ram , {this.state.name}</h1>
+//         <h1>{this.props.str}</h1>
+//         <button onClick={()=>{this.setState({name:this.state.name+1})}}>btn</button>
+//       </div>
+//     )
+//   }
+// }
+
+// ! 2
+
+// import React from 'react'
+
+
+// function Practice(props) {
+//   const name= props.name
+//   const [count,setCount] =useState(0);
+//   return (
+//     <div>
+//       <h1>{name}</h1>
+//       <h2>{count}</h2>
+//       <button onClick={()=>{setCount(count+1)}}>btn</button>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// Practice.defaultProps = {
+//   name:"sonu"
+// }
+
+
+// ! 3
+
+// import React from 'react'
+
+// export default function Practice() {
+//   const [data,setData] = useState(true)
+//   return (
+//     <div>
+//       {data?<h1>ram</h1>:""}
+//       <button onClick={()=>{setData(false)}}>hide</button>
+//       <button onClick={()=>{setData(true)}}>show</button>
+//     </div>
+//   )
+// }
+
+// ! 4
+
+// export default function Practice() {
+//   const [data,setData] = useState(true)
+//   return (
+//     <div>
+//       {data?<h1>ram</h1>:""}
+//       {/* <button onClick={()=>{setData(!data)}}>toggle</button> */}
+      {/* <button onClick={()=>{setData(true)}}>show</button> */}
+//     </div>
+//   )
+// }
+
+// ! 5
+
+// import React from 'react'
+
+// function Practice() {
+
+//   const [name,setName] = useState("");
+//   const [password,setPassword] = useState("");
+
+//   let bb = (e)=>{
+//     e.preventDefault();
+//     console.log(name,password);
+//     setName("")
+//     setPassword("")
+
+
+//   }
+ 
+//   return (
+//     <div>
+//       <h1>ram</h1>
+//       <form  >
+//         <input type="text" placeholder="name" value={name} onChange={(e)=>{setName(e.target.value)}} />
+//         <input type="text" placeholder="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} />
+//         <button type="submit" onClick={bb} >submit</button>
+//       </form>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 7
+
+// export default class Practice extends  Component{
+//   constructor(){
+//     super()
+//     this.state={
+//       name:"sonu pandey",
+//       count:0
+//     }
+//     console.log("constructoe called")
+   
+//   }
+
+  // static getDerivedStateFromProps(props,state){
+  //   state = props
+  //   console.log(state)
+  //   console.log(props)
+  //   return{
+  //     undefined
+  //   }
+    
+
+//   // }
+//   componentDidMount(){
+   
+//     console.log("component mounted")
+    
+//   }
+
+//   // shouldComponentUpdate(nextProps,nextState){
+//   //   console.log("component should update")
+//   // if(nextState.count<10){
+//   // return (
+//   //   true
+//   // )}
+//   // }\
+
+//   componentDidUpdate(nextProps,nextState){
+//     console.log("component updaTED")
+//     console.log(nextState)
+//   }
+
+//   // getSnapshotBeforeUpdate(preProps,preState){
+//   //   console.log(preState)
+//   //   console.log("KK")
+//   //   return{
+//   //     undefined
+//   //   }
+
+//   // }
+
+//   componentWillUnmount(){
+//     console.log("component unmounted")
+//   }
+
+
+//   render(){
+//     console.log("render called")
+//     return(
+//       <>
+//         {/* <h1>{this.props.name}</h1> */}
+//         <h1>{this.state.count}</h1>
+//         <button onClick={()=>{this.setState({count:this.state.count+1})}}>btn</button>
+//       </>
+//     )
+//   }
+// }
+
+
+// ! 8
+
 

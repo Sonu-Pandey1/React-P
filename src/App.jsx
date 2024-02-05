@@ -1,10 +1,12 @@
 
 // import { useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import Practice from './Component/Practice'
 
 
 function App() {
+  const [data,setData] = useState(true);
 
 
   return (
@@ -275,20 +277,34 @@ function App() {
 
     {/* //! 1 example of classs based componenrt  props,stste,defalut props ,propstype ? */}
 
+    {/* <Practice  /> */}
+
 
     {/* //! 2 example of Function based component, use of use-state props, props in destrustred way and also as pass a spread oprator way obj ? */}
 
+    {/* <Practice name={"khushi"}/> */}
+
 
     {/* //! 3 hide and show h1 on click ? */}
+
+    {/* <Practice/> */}
  
 
     {/* //! 4 toggle h1 on click ?  */}
+    {/* <Practice/> */}
+
  
     {/* //! 5 get the data from form ? */}
+    {/* <Practice/> */}
     
     {/* //! 6 basic form validition ? */}
+
+    {/* <Practice/> */}
    
     {/* //! 7 explain life cycle methods and is method ? */}
+
+    {/* {data?<Practice name="somi"/>:""}
+    <button onClick={()=>{setData(false)}}>unmounted</button> */}
   
    
     
