@@ -406,16 +406,17 @@ function App() {
             {/* </stateContext.Provider> */}
 
             {/* <Practice mode = {mode} toggler = {toggler} /> */}
-            <Practice/>
+            {/* <Practice/> */}
 
-            
 
             {/*//! 14 implimint redux  */}
+            <Practice />
+            {/* window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() ); */}
 
 
             {/*//! 14 implimint redux toolkit */}
 
-            {/*  na bhi kare to chal jaega par sunday ko to karna pdi */}
+
             {/* //! 14 setup routing togather nexted routing and dyanamic routing ? */}
             {/* //! 15 use of seacrchParams and setsearchParamas hooks in rrd // for give the output on the basics of what will serch/query in the url ? */}
 

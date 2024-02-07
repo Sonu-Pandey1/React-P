@@ -3,9 +3,13 @@
 // import { Component } from "react";
 
 import { useContext, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 // import { stateContext } from "../App";
 // import usecCustom from "../Component/useCustom"
-import {DarkModeContext} from "../context/darkModeContext"
+// import {DarkModeContext} from "../context/darkModeContext"
+// import { useDispatch, useSelector } from "react-redux";
+// import {incNum,decNum} from "../Redux/Actions/Actions"
+import {incNumber,decNumber} from "../Redux/Actions/Actions"
 
 
 //  export default class Peactice extends Component{
@@ -854,7 +858,7 @@ import {DarkModeContext} from "../context/darkModeContext"
 
 // export default Practice
 
-// ! 15
+// ! 13
 
 // import React from 'react'
 // import {ThemChangerContext} from "../context/themChangerContext"
@@ -873,6 +877,46 @@ import {DarkModeContext} from "../context/darkModeContext"
 
 // export default Practice
 
-// ! 16
+// ! 14
+
+// import React from 'react'
+
+// function Practice() {
+//   let myState = useSelector((state) => state.changetheNumber);
+//   console.log(myState)
+//   let dispatch = useDispatch()
+  
+//   return (
+//     <div>
+//       <h1>ramg</h1>
+//       <h2>{myState}</h2>
+//       <button onClick={()=>dispatch(incNum())}>+</button>
+//       <button onClick={() => { dispatch(decNum()) }}>-</button>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 14 //1
+
+// import React from 'react'
+
+// function Practice() {
+//   const Count = useSelector((state) => state.changeTheNumber)
+//   const dispatch = useDispatch()
+//   return (
+//     <div>
+//       <h1>raamg</h1>
+//       <h2>{Count}</h2>
+//       <button onClick={()=> dispatch(incNumber())}>Increment</button>
+//       <button onClick={()=> dispatch(decNumber())}>Decrement</button>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+
 
 
