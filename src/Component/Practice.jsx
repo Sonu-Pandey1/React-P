@@ -2,7 +2,11 @@
 //! 1 
 // import { Component } from "react";
 
-import { Component, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useContext, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState } from "react";
+// import { stateContext } from "../App";
+// import usecCustom from "../Component/useCustom"
+import {DarkModeContext} from "../context/darkModeContext"
+
 
 //  export default class Peactice extends Component{
 
@@ -31,6 +35,9 @@ import { Component, useEffect, useLayoutEffect, useMemo, useRef, useState } from
 //! 2
 
 // function Practice({name}){
+
+
+
 
 //     const [count,setCount] = useState(0)
 
@@ -610,6 +617,240 @@ import { Component, useEffect, useLayoutEffect, useMemo, useRef, useState } from
 // }
 
 
-// ! 8
+// ! 9
+
+// export default function Practice ({fun}){
+//   return(
+//     <>
+//       <h1>ram {fun("g")}</h1>
+//     </>
+//   )
+// }
+
+// ! 10
+
+// export default function Practice(){
+//   return(
+//     <>
+//       <h1>ram</h1>
+//     </>
+//   )
+// }
+
+
+// ! 11
+
+// function Practice (){
+ 
+
+  // let handleCounter = ()=>{
+    // console.log(prevalue)
+ 
+    
+    // setCounter((da)=>{
+    //   console.log(da)
+    //   return counter+1
+    // })
+
+  // }
+
+
+//   return(
+//     <>
+//       <h1>ram</h1>
+//       <p>{counter}</p>
+//       <button onClick={handleCounter}>btn</button>
+//     </>
+//   )
+// }
+// export default Practice
+
+// ! 12
+
+// import React from 'react'
+
+// function Practice({cmd}) {
+//   const lastVal = useRef()
+
+//   let hh = ()=>{
+//     console.log("rrrrrrr")
+//     // lastVal.current.style.Color = "red"
+//     lastVal.current.style.color="red"
+//   }
+
+
+  // useEffect (()=>{
+  //   lastVal.current = cmd
+
+  // })
+
+  // return (
+//     <div>
+//       <h1>ram { cmd}</h1>
+//       <p>{lastVal.current}</p>
+//       <input ref={lastVal} type="text" placeholder="name" />
+//       <button onClick={hh}>onclik</button>
+//       {/* <button onClick={()=>{cmd+1}}>btn</button> */}
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 13
+
+// import React from 'react'
+
+// function Practice() {
+//   const [data,setData] = useState({name:"sonu",age:23})
+//   return (
+//     <div>
+//     <input type="text" placeholder="name"  onChange={(e)=>{setData({...data,name: e.target.value})}} />
+//     <input type="text" placeholder="age" onChange={(e)=>{setData( {...data,age:e.target.value})}} />
+//       <h1>{data.name}</h1>
+//       <h1>{data.age}</h1>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 14
+
+// import React from 'react'
+// import {darkMode} from "./useCustom"
+// import {lightContext} from "../App"
+
+// let initialState = 0
+
+// const reducer =(state,action)=>{
+//   if(action.type ==="INCREMENT"){
+//     console.log(state,action.type)
+//     return state+1;
+//   }
+//   else{
+//     console.log(state,action.type)
+//     return state-1
+    
+//   }
+
+// }
+
+// function Practice() {
+//   const [counter1,setCounter1] = useState(0)
+//   const [counter2,setCounter2] = useState(10)
+
+//   // ! uselayouteffect
+
+//   // useLayoutEffect(()=>{
+//   //   console.log("g")
+//   // })
+//   // useEffect(()=>{
+//   //   console.log("component mounted")
+//   // })
+
+//   // ! custom hhook
+//   // let ramm = usecCustom()
+
+//   // ! use memo
+//   let count2 = ()=>{
+//     // let i = 1;
+//     // for(i=0;i<+10000; i++){
+//     //   console.log(i)
+//     // }
+
+//     setCounter2(counter2+1)
+//   }
+//   let ifeven = ()=>{
+//     if(counter2%2===0){
+//       return"even"
+//     }
+//     else{
+//       return "odd"
+//     }
+//   }
+
+//   let multicount = useMemo(()=>{
+//     console.log("multicount called")
+//     return counter2*5
+//   },[counter2])
+//   // ! use context
+//   const dark = useContext(darkMode)
+//   console.log(dark)
+
+//   // const light = useContext(lightContext)
+//   // console.log(light)
+
+  
+
+  
+//   // ! useReducer
+//   const [state,dispatch] = useReducer(reducer,initialState)
+
+//   return (
+//     <div>
+//     <h1>ram</h1>
+    
+//     {/* <div>{ramm}</div>  */}
+//     <p>{counter1}</p>
+//     <p>{counter2}</p>
+//     {ifeven()}
+//     {multicount}<br/>
+//     {state}
+//     <button onClick={()=>{setCounter1(counter1+1)}}>counter1</button>
+//     <button onClick={count2}>counter2</button>
+//     <button onClick={()=>{dispatch({type:"INCREMENT"})}}>inc</button>
+//     <button onClick={()=>{dispatch({type:"DECREMENT"})}}>dec</button>
+    
+
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 15
+
+// import React from 'react'
+
+
+
+
+// function Practice() {
+//   const { darkMode, dispatch } = useContext(DarkModeContext);
+//   console.log(darkMode)
+//   // const {state,dispatch}  = useContext(stateContext)
+//   // console.log(tyi)
+//   // const [state,dispatch] = useReducer(reducer,initialState)
+//   return (
+//     <div>
+//       <h1>ram</h1>
+      
+//       <h2>{darkMode}</h2>
+//       {/* <button onClick={()=>{dispatch({type:"INCREMENT"})}} >btn</button>
+//       <button onClick={()=>{dispatch({type:"DECREMENT"})}} >btn</button> */}
+//       <button onClick={()=> dispatch({type:"TOGGLE"})} >themChanger</button>
+//       {/* <button onClick={()=>{dispatch({type:"Light"})}}>light</button> */}
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 15
+
+// import React from 'react'
+
+function Practice() {
+  return (
+    <div>
+      <h1>ram</h1>
+      <button >DarkMode</button>
+      <button >LightMode</button>
+    </div>
+  )
+}
+
+export default Practice
 
 

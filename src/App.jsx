@@ -1,22 +1,70 @@
 
 // import { useState } from 'react'
-import { useState } from 'react'
+// import {   useState } from 'react'
+import { createContext, useReducer } from 'react'
 import './App.css'
 import Practice from './Component/Practice'
 
+// let context = createContext()
+
+// const lightContext = createContext()
+
+
+// const stateContext  = createContext()
+
+// const reducer = (state,action)=>{
+
+//     switch(action.type){
+//       case "INCREMENT":
+//         return state = state+1
+      
+//       case "DECREMENT" :
+//         return state-1
+      
+//       default:
+//         return state;
+//     }
+  
+//   }
+
+
 
 function App() {
-  const [data,setData] = useState(true);
+    // let initialState = 0
+
+    // const [state,dispatch]  = useReducer(reducer,initialState)
+    // const [data,setData] = useState(true);
+    // const [counter, setCounter] = useState(0)
 
 
-  return (
-    
 
-    <> 
-{/* 1 times compl*/} 
-{/* 2 */}
 
-{/* //! notebook Questions ----------
+    // let funi = (num)=>{
+    //   console.log(num)
+    // }
+
+    // let HOCRed = ({cmd})=>{
+    //   return(
+    //     <div style={{backgroundColor:"red"}}>{cmd}</div>
+    //   )
+
+    // }
+    // let HOCBlue = ({cmd})=>{
+    //   return(
+    //     <div style={{backgroundColor:"blue"}}>{cmd}</div>
+    //   )
+
+    // }
+
+
+    return (
+
+
+        <>
+            {/* 1 times compl*/}
+            {/* 2 */}
+
+            {/* //! notebook Questions ----------
 
     //? 1 what is react & why is so popular  ?
 
@@ -273,80 +321,108 @@ function App() {
 */}
 
 
-    {/* //todo--- pc/ Logicial Questions  */}
+            {/* //todo--- pc/ Logicial Questions  */}
 
-    {/* //! 1 example of classs based componenrt  props,stste,defalut props ,propstype ? */}
+            {/* //! 1 example of classs based componenrt  props,stste,defalut props ,propstype ? */}
 
-    {/* <Practice  /> */}
-
-
-    {/* //! 2 example of Function based component, use of use-state props, props in destrustred way and also as pass a spread oprator way obj ? */}
-
-    {/* <Practice name={"khushi"}/> */}
+            {/* <Practice  /> */}
 
 
-    {/* //! 3 hide and show h1 on click ? */}
+            {/* //! 2 example of Function based component, use of use-state props, props in destrustred way and also as pass a spread oprator way obj ? */}
 
-    {/* <Practice/> */}
- 
+            {/* <Practice name={"khushi"}/> */}
 
-    {/* //! 4 toggle h1 on click ?  */}
-    {/* <Practice/> */}
 
- 
-    {/* //! 5 get the data from form ? */}
-    {/* <Practice/> */}
-    
-    {/* //! 6 basic form validition ? */}
+            {/* //! 3 hide and show h1 on click ? */}
 
-    {/* <Practice/> */}
-   
-    {/* //! 7 explain life cycle methods and is method ? */}
+            {/* <Practice/> */}
 
-    {/* {data?<Practice name="somi"/>:""}
+
+            {/* //! 4 toggle h1 on click ?  */}
+            {/* <Practice/> */}
+
+
+            {/* //! 5 get the data from form ? */}
+            {/* <Practice/> */}
+
+            {/* //! 6 basic form validition ? */}
+
+            {/* <Practice/> */}
+
+            {/* //! 7 explain life cycle methods and is method ? */}
+
+            {/* {data?<Practice name="somi"/>:""}
     <button onClick={()=>{setData(false)}}>unmounted</button> */}
-  
-   
-    
-    {/* //! 9 lifting state / send data  child components to parent component ? */}
-
-    {/* //! 10 explain high order component with example ? */}
-   
-    {/* //! 11 get previous state in function based component with example ? */}
-
-    {/* //! 12 previous props in function based component with example ? */}
-
-    {/* //! 13 state with object means that state main object pas karne par issue is that whole object are chnage when we change only one property so avoide this we use spard oprator ? */}
- 
-    {/* //! 14 explain hook and there types with example use state , use effect , use layouteffect , use ref , use memo , use callback , use reducer , use context , custome hook  ? */}
-    
-
-    {/*//! 14 implimint redux  */}
-
-
-    {/*//! 14 implimint redux toolkit */}
-  
-{/*  na bhi kare to chal jaega par sunday ko to karna pdi */}
-    {/* //! 14 setup routing togather nexted routing and dyanamic routing ? */}
-    {/* //! 15 use of seacrchParams and setsearchParamas hooks in rrd // for give the output on the basics of what will serch/query in the url ? */}
-
-    {/* //! 16 navigating on click / use of usenavigate hooks in rrd ? */}
-    {/* //! 17 use of  use location hooks/ gives all the data of parent component  / reeadony porpuse i dont gt */}
-    {/* //! 18 use protected route hooks  ( we also do that with the help of high-order component where we can paas a condition that if user is active then navigate to children(routes) else navigate login) ? */}
-
-    {/* //! 19 firebase confidgure set user (login , logout registration ,admin login) */}
-    {/* //! 19 firebase configure (get set and update data in firbase ) */}
 
 
 
+            {/* //! 9 lifting state / send data  child components to parent component ? */}
+            {/* <Practice fun = {funi}/> */}
+
+            {/* //! 10 explain high order component with example ? */}
+            {/* 
+    <HOCRed cmd={<Practice/>}></HOCRed>
+    <HOCBlue cmd={<Practice/>}></HOCBlue> */}
+
+            {/* //! 11 get previous state in function based component with example ? */}
+
+            {/* <Practice/> */}
+
+            {/* //! 12 previous props in function based component with example ? */}
+            {/* 
+    <Practice  cmd= {counter}/>
+    <button onClick={()=>{setCounter(counter+1)}}>btn</button> */}
+
+            {/* //! 13 state with object means that state main object pas karne par issue is that whole object are chnage when we change only one property so avoide this we use spard oprator ? */}
+
+            {/* <Practice/> */}
+
+            {/* //! 14 explain hook and there types with example use state , use effect ,  use ref , use layouteffect custome hook ,use memo ,  use context , use callback ,   ? */}
+
+           
+            {/* <lightContext.Provider value={"khusboooooo i love you"}>
+            <Practice/>
+            </lightContext.Provider> */}
+
+            {/* //! 14 useReducer + UseCOntext Example */}
+            {/* <stateContext.Provider value={{state:state,dispatch:dispatch}}>
+            <h2>{state}</h2> */}
+            {/* <Practice/> */}
+            {/* </stateContext.Provider> */}
+
+            <Practice />
+
+            
+
+            {/*//! 14 implimint redux  */}
+
+
+            {/*//! 14 implimint redux toolkit */}
+
+            {/*  na bhi kare to chal jaega par sunday ko to karna pdi */}
+            {/* //! 14 setup routing togather nexted routing and dyanamic routing ? */}
+            {/* //! 15 use of seacrchParams and setsearchParamas hooks in rrd // for give the output on the basics of what will serch/query in the url ? */}
+
+            {/* //! 16 navigating on click / use of usenavigate hooks in rrd ? */}
+            {/* //! 17 use of  use location hooks/ gives all the data of parent component  / reeadony porpuse i dont gt */}
+            {/* //! 18 use protected route hooks  ( we also do that with the help of high-order component where we can paas a condition that if user is active then navigate to children(routes) else navigate login) ? */}
+
+            {/* //! 19 firebase confidgure set user (login , logout registration ,admin login) */}
+            {/* //! 19 firebase configure (get set and update data in firbase ) */}
 
 
 
 
 
 
-    </>
-  )
+
+
+
+        </>
+    )
 }
 
 export default App
+// export {context};
+// export {lightContext}
+// export {stateContext}
