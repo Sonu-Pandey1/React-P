@@ -1,7 +1,7 @@
 
 // import { useState } from 'react'
 // import {   useState } from 'react'
-import { createContext, useReducer } from 'react'
+import { createContext, useReducer, useState } from 'react'
 import './App.css'
 import Practice from './Component/Practice'
 
@@ -30,6 +30,21 @@ import Practice from './Component/Practice'
 
 
 function App() {
+
+    // const [mode,setMode] = useState("light")
+
+    // let toggler = ()=>{
+    //     if(mode==="light"){
+    //         setMode("dark")
+    //         // console.log(mode)
+    //         document.body.style.backgroundColor = "red"
+    //     }
+    //     else{
+    //         setMode("light")
+    //         document.body.style.backgroundColor = ""
+    //     }
+    // }
+
     // let initialState = 0
 
     // const [state,dispatch]  = useReducer(reducer,initialState)
@@ -390,7 +405,8 @@ function App() {
             {/* <Practice/> */}
             {/* </stateContext.Provider> */}
 
-            <Practice />
+            {/* <Practice mode = {mode} toggler = {toggler} /> */}
+            <Practice/>
 
             
 

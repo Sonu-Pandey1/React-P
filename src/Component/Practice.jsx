@@ -841,16 +841,38 @@ import {DarkModeContext} from "../context/darkModeContext"
 
 // import React from 'react'
 
-function Practice() {
-  return (
-    <div>
-      <h1>ram</h1>
-      <button >DarkMode</button>
-      <button >LightMode</button>
-    </div>
-  )
-}
+// function Practice({mode,toggler}) {
+//   console.log(mode)
+//   return (
+//     <div>
+//       <h1>ram</h1>
+//       <button >DarkMode</button>
+//       <button onClick={()=>{toggler()}}>LightMode</button>
+//     </div>
+//   )
+// }
 
-export default Practice
+// export default Practice
+
+// ! 15
+
+// import React from 'react'
+// import {ThemChangerContext} from "../context/themChangerContext"
+
+// function Practice() {
+//   const {dispatch,state} =useContext(ThemChangerContext)
+//   return (
+//     <div>
+//       <h1>ramg</h1>
+//       <h1>{state}</h1>
+//       <button onClick={()=>{dispatch({type:"Dark"})}}>darkThemCHanger</button>
+//       <button onClick={()=>{dispatch({type:"Light"})}}>lightThemCHanger</button>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 16
 
 
