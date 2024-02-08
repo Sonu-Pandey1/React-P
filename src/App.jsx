@@ -371,28 +371,28 @@ function App() {
 
 
 
-            {/* //! 9 lifting state / send data  child components to parent component ? */}
+            {/* //! 8 lifting state / send data  child components to parent component ? */}
             {/* <Practice fun = {funi}/> */}
 
-            {/* //! 10 explain high order component with example ? */}
+            {/* //! 9 explain high order component with example ? */}
             {/* 
     <HOCRed cmd={<Practice/>}></HOCRed>
     <HOCBlue cmd={<Practice/>}></HOCBlue> */}
 
-            {/* //! 11 get previous state in function based component with example ? */}
+            {/* //! 10 get previous state in function based component with example ? */}
 
             {/* <Practice/> */}
 
-            {/* //! 12 previous props in function based component with example ? */}
+            {/* //! 11 previous props in function based component with example ? */}
             {/* 
     <Practice  cmd= {counter}/>
     <button onClick={()=>{setCounter(counter+1)}}>btn</button> */}
 
-            {/* //! 13 state with object means that state main object pas karne par issue is that whole object are chnage when we change only one property so avoide this we use spard oprator ? */}
+            {/* //! 12 state with object means that state main object pas karne par issue is that whole object are chnage when we change only one property so avoide this we use spard oprator ? */}
 
             {/* <Practice/> */}
 
-            {/* //! 14 explain hook and there types with example use state , use effect ,  use ref , use layouteffect custome hook ,use memo ,  use context , use callback ,   ? */}
+            {/* //! 13 explain hook and there types with example use state , use effect ,  use ref , use layouteffect custome hook ,use memo ,  use context , use callback ,   ? */}
 
            
             {/* <lightContext.Provider value={"khusboooooo i love you"}>
@@ -404,28 +404,30 @@ function App() {
             <h2>{state}</h2> */}
             {/* <Practice/> */}
             {/* </stateContext.Provider> */}
-
             {/* <Practice mode = {mode} toggler = {toggler} /> */}
             {/* <Practice/> */}
 
+            {/* <Practice/> */}
 
-            {/*//! 14 implimint redux  */}
-            <Practice />
+
+            {/*//! 15 implimint redux  */}
+            {/* <Practice /> */}
             {/* window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() ); */}
 
 
-            {/*//! 14 implimint redux toolkit */}
+            {/*//! 16 implimint redux toolkit */}
+            <Practice/>
 
 
-            {/* //! 14 setup routing togather nexted routing and dyanamic routing ? */}
-            {/* //! 15 use of seacrchParams and setsearchParamas hooks in rrd // for give the output on the basics of what will serch/query in the url ? */}
+            {/* //! 17 setup routing togather nexted routing and dyanamic routing ? */}
+            {/* //! 18 use of seacrchParams and setsearchParamas hooks in rrd // for give the output on the basics of what will serch/query in the url ? */}
 
-            {/* //! 16 navigating on click / use of usenavigate hooks in rrd ? */}
-            {/* //! 17 use of  use location hooks/ gives all the data of parent component  / reeadony porpuse i dont gt */}
-            {/* //! 18 use protected route hooks  ( we also do that with the help of high-order component where we can paas a condition that if user is active then navigate to children(routes) else navigate login) ? */}
+            {/* //! 19 navigating on click / use of usenavigate hooks in rrd ? */}
+            {/* //! 20 use of  use location hooks/ gives all the data of parent component  / reeadony porpuse i dont gt */}
+            {/* //! 21 use protected route hooks  ( we also do that with the help of high-order component where we can paas a condition that if user is active then navigate to children(routes) else navigate login) ? */}
 
-            {/* //! 19 firebase confidgure set user (login , logout registration ,admin login) */}
-            {/* //! 19 firebase configure (get set and update data in firbase ) */}
+            {/* //! 22 firebase confidgure set user (login , logout registration ,admin login) */}
+            {/* //! 23 firebase configure (get set and update data in firbase ) */}
 
 
 
