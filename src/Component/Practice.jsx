@@ -4,6 +4,7 @@
 
 import { useContext, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment } from "../Reducers";
 // import { useDispatch, useSelector } from "react-redux";
 // import { useDispatch, useSelector } from "react-redux";
 // import { stateContext } from "../App";
@@ -993,7 +994,34 @@ import { useDispatch, useSelector } from "react-redux";
 
 // ! 16
 
+// import React from 'react'
 
+// function Practice() {
+
+//   let {c} = useSelector((state)=> state.custom )
+//   let dispatch = useDispatch()
+
+  
+//   const handleIncrement = () => {
+//     dispatch(increment());
+// };
+
+// const handleDecrement = () => {
+//     dispatch(decrement());
+// };
+
+//   return (
+//     <div>
+//       <h1>ramg</h1>
+//       <h1>{c}</h1>
+//       <button onClick={handleIncrement}>Increment</button>
+//       <button onClick={handleDecrement}>Decrement</button>
+//     </div>
+//   )
+// }
+
+// export default Practice
+// 
 
 
 
