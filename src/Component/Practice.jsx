@@ -4,7 +4,8 @@
 
 import { Component, useContext, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment } from "../Reducers";
+// import { decrement, increment } from "../Reducers";
+import {increment,decrement} from "../Reducerss"
 // import { useDispatch, useSelector } from "react-redux";
 // import { useDispatch, useSelector } from "react-redux";
 // import { stateContext } from "../App";
@@ -14,11 +15,16 @@ import { decrement, increment } from "../Reducers";
 // import {incNum,decNum} from "../Redux/Actions/Actions"
 // import {incNumber,decNumber} from "../Redux/Actions/Actions"
 // import {incNumber,decNumber} from "../Redux/Actions/Actions"
+import custom from "../Component/useCustom"
+import useCustomHook from "../Component/useCustom";
+import { counterContext } from "../context/counterContext";
+// import counterContext from "../App"
+// import {counterContext} from "../App"
 // 
 
 //  export default class Peactice extends Component{
 
-    
+
 //     constructor(){
 //         super()
 //         this.state={
@@ -93,7 +99,7 @@ import { decrement, increment } from "../Reducers";
 
 //     <button onClick={handlehide}>hide </button>
 //     <button onClick={handleshow}>show</button>
-      
+
 //     </div>
 //   )
 // }
@@ -115,7 +121,7 @@ import { decrement, increment } from "../Reducers";
 
 
 //     <button onClick={handleshow}>toggle</button>
-      
+
 //     </div>
 //   )
 // }
@@ -182,7 +188,7 @@ import { decrement, increment } from "../Reducers";
 //         console.log(preProps,preState)
 //         // if(preState.counter===10){
 //         //     alert("hy")
-          
+
 //         // }
 //         console.log("component updated")
 //     }
@@ -192,7 +198,7 @@ import { decrement, increment } from "../Reducers";
 //         if(nextState.counter<=9){
 //             return true;
 //         }
-        
+
 //     }
 
 //     // getSnapshotBeforeUpdate(preProps,preState){
@@ -225,10 +231,10 @@ import { decrement, increment } from "../Reducers";
 
 //     return (
 //       <div>
-     
+
 //         <h1>{this.state.counter}</h1>
 //         <button onClick={handleClick}>btn</button>
-     
+
 //       </div>
 //     )
 //   }
@@ -239,40 +245,40 @@ import { decrement, increment } from "../Reducers";
 // import React from 'react'
 
 // function Practice() {
-  // ! use state
+// ! use state
 //     const [data,setData] = useState(0)
 //     const [dataa,setDataa] = useState(0)
 //     const inputRef =useRef()
 
 
 // ! use ref
-    // let clickhandler=()=>{
-    //   console.log("rrrr")
-    //   inputRef.current.style.color="red"
+// let clickhandler=()=>{
+//   console.log("rrrr")
+//   inputRef.current.style.color="red"
 
-    // }
-    
-    // const [dataa,setDataa] = useState([])
-    // console.log(dataa)
-   
+// }
+
+// const [dataa,setDataa] = useState([])
+// console.log(dataa)
+
 // ! use effect
-    // useEffect(()=>{
-    //   console.log("component will mount")
-    //   // let res = fetch("https://jsonplaceholder.typicode.com/posts")
-    //   let res = fetch("https://dummyjson.com/products")
-    //   .then((res)=>{
-    //     return res.json()
-    //   }).then((ress)=>{
-    //     console.log(ress)
-    //     // setDataa(ress.products)
-    //   }).catch((err)=>{
-    //     console.log(err)
-    //   })
-    
-      
-    // },[])
+// useEffect(()=>{
+//   console.log("component will mount")
+//   // let res = fetch("https://jsonplaceholder.typicode.com/posts")
+//   let res = fetch("https://dummyjson.com/products")
+//   .then((res)=>{
+//     return res.json()
+//   }).then((ress)=>{
+//     console.log(ress)
+//     // setDataa(ress.products)
+//   }).catch((err)=>{
+//     console.log(err)
+//   })
 
-    //! use layouteffect
+
+// },[])
+
+//! use layouteffect
 // useLayoutEffect(()=>{
 //   console.log("copmonrnt")
 //   let res = fetch("https://dummyjson.com/products")
@@ -285,7 +291,7 @@ import { decrement, increment } from "../Reducers";
 //         console.log(err)
 //       })
 // })
-    
+
 // ! use memo
 
 // const computeExpensiveValue = (num) => {
@@ -306,18 +312,18 @@ import { decrement, increment } from "../Reducers";
 // ! custom hook
 
 //! use context
-    
-  // return (
-  //   <div>
-  //     <h1>hooks</h1>
-  //     <ul>
-   
-      {/* {dataa.map(item => (
+
+// return (
+//   <div>
+//     <h1>hooks</h1>
+//     <ul>
+
+{/* {dataa.map(item => (
         <li key={item.id}>{item.title}</li>
       ))} */}
-    
-    // </ul>
-     {/* {dataa.map((i)=>{
+
+// </ul>
+{/* {dataa.map((i)=>{
       console.log(i)
      })} */}
 
@@ -459,9 +465,9 @@ import { decrement, increment } from "../Reducers";
 //     }
 
 //   }
-  
+
 //   render() {
-    
+
 //     return (
 //       <div>
 //         <h1>ram , {this.state.name}</h1>
@@ -519,7 +525,7 @@ import { decrement, increment } from "../Reducers";
 //     <div>
 //       {data?<h1>ram</h1>:""}
 //       {/* <button onClick={()=>{setData(!data)}}>toggle</button> */}
-      {/* <button onClick={()=>{setData(true)}}>show</button> */}
+{/* <button onClick={()=>{setData(true)}}>show</button> */ }
 //     </div>
 //   )
 // }
@@ -541,7 +547,7 @@ import { decrement, increment } from "../Reducers";
 
 
 //   }
- 
+
 //   return (
 //     <div>
 //       <h1>ram</h1>
@@ -566,23 +572,23 @@ import { decrement, increment } from "../Reducers";
 //       count:0
 //     }
 //     console.log("constructoe called")
-   
+
 //   }
 
-  // static getDerivedStateFromProps(props,state){
-  //   state = props
-  //   console.log(state)
-  //   console.log(props)
-  //   return{
-  //     undefined
-  //   }
-    
+// static getDerivedStateFromProps(props,state){
+//   state = props
+//   console.log(state)
+//   console.log(props)
+//   return{
+//     undefined
+//   }
+
 
 //   // }
 //   componentDidMount(){
-   
+
 //     console.log("component mounted")
-    
+
 //   }
 
 //   // shouldComponentUpdate(nextProps,nextState){
@@ -649,18 +655,18 @@ import { decrement, increment } from "../Reducers";
 // ! 11
 
 // function Practice (){
- 
 
-  // let handleCounter = ()=>{
-    // console.log(prevalue)
- 
-    
-    // setCounter((da)=>{
-    //   console.log(da)
-    //   return counter+1
-    // })
 
-  // }
+// let handleCounter = ()=>{
+// console.log(prevalue)
+
+
+// setCounter((da)=>{
+//   console.log(da)
+//   return counter+1
+// })
+
+// }
 
 
 //   return(
@@ -687,12 +693,12 @@ import { decrement, increment } from "../Reducers";
 //   }
 
 
-  // useEffect (()=>{
-  //   lastVal.current = cmd
+// useEffect (()=>{
+//   lastVal.current = cmd
 
-  // })
+// })
 
-  // return (
+// return (
 //     <div>
 //       <h1>ram { cmd}</h1>
 //       <p>{lastVal.current}</p>
@@ -739,7 +745,7 @@ import { decrement, increment } from "../Reducers";
 //   else{
 //     console.log(state,action.type)
 //     return state-1
-    
+
 //   }
 
 // }
@@ -789,16 +795,16 @@ import { decrement, increment } from "../Reducers";
 //   // const light = useContext(lightContext)
 //   // console.log(light)
 
-  
 
-  
+
+
 //   // ! useReducer
 //   const [state,dispatch] = useReducer(reducer,initialState)
 
 //   return (
 //     <div>
 //     <h1>ram</h1>
-    
+
 //     {/* <div>{ramm}</div>  */}
 //     <p>{counter1}</p>
 //     <p>{counter2}</p>
@@ -809,7 +815,7 @@ import { decrement, increment } from "../Reducers";
 //     <button onClick={count2}>counter2</button>
 //     <button onClick={()=>{dispatch({type:"INCREMENT"})}}>inc</button>
 //     <button onClick={()=>{dispatch({type:"DECREMENT"})}}>dec</button>
-    
+
 
 //     </div>
 //   )
@@ -833,7 +839,7 @@ import { decrement, increment } from "../Reducers";
 //   return (
 //     <div>
 //       <h1>ram</h1>
-      
+
 //       <h2>{darkMode}</h2>
 //       {/* <button onClick={()=>{dispatch({type:"INCREMENT"})}} >btn</button>
 //       <button onClick={()=>{dispatch({type:"DECREMENT"})}} >btn</button> */}
@@ -889,7 +895,7 @@ import { decrement, increment } from "../Reducers";
 //   let myState = useSelector((state) => state.changetheNumber);
 //   console.log(myState)
 //   let dispatch = useDispatch()
-  
+
 //   return (
 //     <div>
 //       <h1>ramg</h1>
@@ -928,7 +934,7 @@ import { decrement, increment } from "../Reducers";
 // function Practice() {
 //   const {state,dispatch}  = useContext(ThemChangeContext)
 //   console.log(state.darkMode)
-  
+
 //   let darkModeF = ()=>{
 //     dispatch({type:"Dark"})
 //     // document.body.style.backgroundColor = "black"
@@ -966,7 +972,7 @@ import { decrement, increment } from "../Reducers";
 //       <h1>{myState}</h1>
 //       <button onClick={()=>{dispatch(incNumber())}}>Increment</button>
 //       <button onClick={()=>{dispatch(decNumber())}}>Decrement</button>
-    
+
 //     </div>
 //   )
 // }
@@ -1001,7 +1007,7 @@ import { decrement, increment } from "../Reducers";
 //   let {c} = useSelector((state)=> state.custom )
 //   let dispatch = useDispatch()
 
-  
+
 //   const handleIncrement = () => {
 //     dispatch(increment());
 // };
@@ -1158,7 +1164,7 @@ import { decrement, increment } from "../Reducers";
 //     )
 
 //   }
-  
+
 //   componentWillUnmount(){
 //     console.log("khatam")
 //   }
@@ -1252,13 +1258,13 @@ import { decrement, increment } from "../Reducers";
 //     previous.current = counter
 //   })
 //   let previousValue = previous.current
- 
+
 //   return (
 //     <div>
 //       <h1>jay shri ram</h1>
 //       <p>{counter}</p>
 //       <p> previous value : -{previousValue}</p>
-      
+
 //     </div>
 //   )
 // }
@@ -1267,4 +1273,176 @@ import { decrement, increment } from "../Reducers";
 
 // ! 12
 
+// import React from 'react'
+
+// function Practice() {
+//   const [name,setName] = useState({
+//     name:"sonu",
+//     password:"pandey"
+//   })
+
+//   return (
+//     <div>
+//       <h1>jay shree ram</h1>
+//       <p>{name.name}</p>
+//       <p>{name.password}</p>
+
+//       <input type="text" placeholder="name" onChange={(e)=>{setName({...name,name:e.target.value})}} />
+//       <input type="text" placeholder="password" onChange={(e)=>{setName({...name,password:e.target.value})}}/>
+
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 13
+
+// import React from 'react'
+// let initialState = 0
+
+// let reducer = (state,action)=>{
+//     switch(action.type){
+//       case "INCREMENT":
+//         return state+1;
+      
+//       case "DECREMENT":
+//         return state-1
+
+//       default :
+//       return state;
+//     }
+
+//   }
+
+// function Practice() {
+  //! use state -c
+  //! use effect -c
+  // useEffect(()=>{
+  //   console.log("component render")
+  // })
+  //! use ref -c 
+  // let inputRef = useRef()
+  // let inputHndller = ()=>{
+  //   inputRef.current.style.backgroundColor = "red"
+  //   inputRef.current.style.border = "3px solid green"
+  // }
+  // ! use layout effect -c
+  // useLayoutEffect(()=>{
+  //   console.log("render before component render")
+  // })
+  // ! use memo -c
+  // const [count1, setCount1] = useState(0)
+  // const [count2, setCount2] = useState(10)
+  // let counter1Hnadler = () => {
+  //   console.log("counter 1 clicked")
+  //   setCount1(count1 + 1)
+  // }
+
+  // let counterHnadler = useMemo(() => {
+  //   console.log("count clicked")
+  //   return count1 * 2
+  // }, [count1])
+
+
+  // let counter2Hnadler = () => {
+  //   console.log("count 2 clicked")
+  //   setCount2(count2 + 1)
+  // }
+
+  // ! use callback-nc
+  // ! custom hook -c
+  // const [counter,increment,decrement] = useCustomHook()
+  // let g = counter
+  // console.log(g)
+ 
+  // ! use reducer -c
+  // const [state,dispatch]  = useReducer(reducer,initialState)
+
+  
+
+  // ! use context -c
+  // const counter = useContext(counterContext)
+  // const {state,dispatch} = useContext(counterContext)
+
+
+
+  // return (
+  //   <div>
+      {/* <h1>jay shri ram</h1> */}
+      {/* <p>{counter}</p> */}
+      {/* <p>{state}</p> */}
+      {/* <p> {custom()}</p> */}
+      {/* <p>count 1---{count1}</p> */}
+      {/* <p>{counterHnadler}</p> */}
+      {/* <p>count 2 ----{count2}</p>
+     
+      {/* <input ref={inputRef} type="text" placeholder="name" />
+      <button onClick={inputHndller}>btn</button> */}
+      {/* <p>{counter}</p> */}
+      {/* <button onClick={()=>{dispatch({type:"increment"})}}>+</button>
+      <button onClick={()=>{dispatch({type:"decrement"})}}>-</button> */}
+      {/* <button onClick={decrement}>-</button> */}
+    {/* </div> */}
+  {/* )
+} */}
+
+{/* export default Practice */}
+
+// ! 14
+
+// import React from 'react'
+
+// function Practice() {
+//   const {state,dispetch} = useContext(counterContext)
+//   return (
+//     <div>
+//       <h1>both</h1>
+//       <p>{state}</p>
+//       <button onClick={()=>{dispetch({type:"INCREMENT"})}}>increment</button>
+//       <button onClick={()=>{dispetch({type:"DECREMENT"})}}>decrement</button>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 15
+
+// import React from 'react'
+
+
+// function Practice() {
+//   const myState = useSelector((state)=> state.custom)
+//   const dispatch  = useDispatch()
+//   return (
+//     <div>
+//       <h1>simple redux</h1>
+//       <p>{myState}</p>
+//       <button onClick={()=>{dispatch(increment)}}>increment</button>
+//       <button onClick={()=>{dispatch(decrement)}}>decrement</button>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 16
+
+// import React from 'react'
+
+// function Practice() {
+//   const {c} = useSelector((state)=> state.custom)
+//   const dispatch = useDispatch()
+//   return (
+//     <div>
+//       <h1>reduc toolkit</h1>
+//       <p>{c}</p>
+//       <button onClick={()=>{dispatch(increment())}}>+</button>
+//       <button onClick={()=>{dispatch(decrement())}}>-</button>
+//     </div>
+//   )
+// }
+
+// export default Practice
 

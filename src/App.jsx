@@ -6,10 +6,31 @@ import { createContext, useReducer, useState } from 'react'
 import './App.css'
 import Practice from './Component/Practice'
 
+// let initialState = 0
+
+// let reducer = (state,action)=>{
+//     switch(action.type){
+//         case "increment":
+//             return state+1;
+
+//         case "decrement":
+//             return state-1
+
+//         default:
+//             return state
+//     }
+
+// }
+// let counterContext = createContext()
 
 function App() {
 
-    const [counter,setCounter] = useState(0)
+    // const [counter,setCounter] = useState(0)
+    // const [state,dispatch] = useReducer(reducer,initialState)
+    
+
+
+
 
     // let fun = (a)=>{
     //     console.log(a)
@@ -254,15 +275,19 @@ function App() {
             {/* <Practice counter = {counter}/>
             <button onClick={()=>{setCounter(counter+1)}}>btn parent</button> */}
             {/* //! 12 state with object means that state main object pas karne par issue is that whole object are chnage when we change only one property so avoide this we use spard oprator ? */}
-            <Practice/>
+            {/* <Practice/> */}
             {/* //! 13 explain hook and there types with example use state , use effect ,  use ref , use layouteffect custome hook ,use memo ,  use context , use callback ,   ? */}
-
-           
-            {/* <lightContext.Provider value={"khusboooo}>
+            {/* <counterContext.Provider value={{state:state,dispatch:dispatch}}>
             <Practice/>
-            </lightContext.Provider> */}
+            </counterContext.Provider> */}
+        
 
             {/* //! 14 useReducer + UseCOntext Example */}
+
+            {/* <Practice/> */}
+
+
+
             {/* <stateContext.Provider value={{state:state,dispatch:dispatch}}>
             <h2>{state}</h2> */}
             {/* <Practice/> */}
@@ -272,12 +297,13 @@ function App() {
             {/* <Practice/> */}
 
             {/*//! 15 implimint redux  */}
-            {/* <Practice /> */}
-            {/* window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() ); */}
+
+            {/* <Practice/> */}
 
 
             {/*//! 16 implimint redux toolkit */}
             {/* <Practice/> */}
+
 
             {/* //! 17 setup routing togather nexted routing and dyanamic routing ? */}
             {/* //! 18 use of seacrchParams and setsearchParamas hooks in rrd // for give the output on the basics of what will serch/query in the url ? */}
@@ -294,6 +320,8 @@ function App() {
 }
 
 export default App
+// export const [counterContext]
+// export {counterContext}
 
 
 // {//! 3  time statrt /}

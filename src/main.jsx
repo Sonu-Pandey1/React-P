@@ -2,6 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 // import { Provider } from 'react-redux'
+// import store from './store.js'
+// import Storee from './Storee.jsx'
+// import storeeee from './Storeee.jsx'
+// import { CounterContext } from './context/counterContext.jsx'
+// import { Provider } from 'react-redux'
 // import store from './Store.jsx'
 // import { ThemChangeContextProvider } from './context/themChangeContext.jsx'
 // import './index.css'
@@ -26,9 +31,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <ThemChangerContextProvider> */}
     {/* <Provider store = {store}> */}
     {/* <ThemChangeContextProvider> */}
-      <App />
-      {/* </ThemChangeContextProvider> */}
-      {/* </Provider> */}
+    {/* <CounterContext> */}
+    {/* <Provider store={Storee}> */}
+    <App />
+    {/* </Provider> */}
+      
+    {/* </CounterContext> */}
+    {/* </ThemChangeContextProvider> */}
+    {/* </Provider> */}
     {/* </ThemChangerContextProvider> */}
     {/* </DarkModeContextProvider> */}
 
