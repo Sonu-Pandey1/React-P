@@ -2,7 +2,7 @@
 //! 1 
 // import { Component } from "react";
 
-import { useContext, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState } from "react";
+import { Component, useContext, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment } from "../Reducers";
 // import { useDispatch, useSelector } from "react-redux";
@@ -1024,5 +1024,247 @@ import { decrement, increment } from "../Reducers";
 // 
 
 
+//! 13/02/2024
+
+// ! 1
+
+// export default class Practice extends Component{
+//   constructor(){
+//     super();
+//     this.state = {
+//       fname : "khushi",
+//     }
+//   }
+//   render(){
+//     return(
+//       <>
+//         <h1>jay shree {this.props.name}</h1>
+//         <p>{this.state.fname}</p>
+//       </>
+//     )
+//   }
+
+// }
+
+// ! 2
+
+// export default function Practice(props){
+//   const {fname} = props
+//   const [name,setName] = useState("ramg")
+//   return(
+//     <>
+//       <h1>jay shree {fname}</h1>
+//       <p>{name}</p>
+//     </>
+//   )
+// }
+
+// ! 3
+
+// export default function Practice(){
+//   const [value,setValue] = useState(true)
+//   return(
+//     <>
+//       {value?<h1>ram</h1>:""}
+//       <button onClick={()=>{setValue(true)}}>show</button>
+//       <button onClick={()=>{setValue(false)}}>hide</button>
+//     </>
+//   )
+// }
+
+// ! 4
+
+// export default function Practice(){
+//   const [value,setValue] = useState(true)
+//   return(
+//     <>
+//       {value?<h1>ram</h1>:""}
+//       <button onClick={()=>{setValue(!value)}}>toggle</button>
+//       {/* <button onClick={()=>{setValue(false)}}>hide</button> */}
+//     </>
+//   )
+// }
+
+// ! 5
+
+// export default function Practice(){
+//   const [data,setData] = useState({
+//     name:"",
+//     password:""
+//   })
+
+//   let submitHandller = (e)=>{
+//     e.preventDefault();
+//     console.log(data)
+//     setData({
+//       name:"",
+//       password:""
+//     })
+
+//   }
+//   return(
+//     <>
+//       <h1>ramg</h1>
+//       <h6>{data.name}</h6>
+//       <h6>{data.password}</h6>
+//       <form >
+//         <input type="text" value={data.name} placeholder="name" onChange={(e)=>{setData({...data,name:e.target.value})}} />
+//         <input type="text" value={data.password} placeholder="password" onChange={(e)=>{setData({...data,password:e.target.value})}} />
+//         <button type="submit" onClick={submitHandller}>submit</button>
+//       </form>
+//     </>
+//   )
+// }
+
+// ! 7
+
+// export default class Practice extends Component{
+//   constructor(){
+//     super();
+//     this.state = {
+//       counter : 0
+//     }
+//     console.log("constructor is called")
+//   }
+
+//   // static getDerivedStateFromProps(state,props){
+//   //   console.log("getDerivedStateFromProps is called")
+//   //   console.log(state,props)
+//   //   state = props
+//   //   console.log(state,props)
+//   //   return(
+//   //     null
+//   //   )
+
+//   // }
+
+//   componentDidMount(){
+//     console.log("component mounted")
+//   }
+
+//   shouldComponentUpdate(nextProps,nextState){
+//     if(nextState.counter<=10){
+//       console.log(nextState)
+//       return(
+//       true
+//     )
+//     }
+//   }
+
+//   shouldComponentUpdate(nextProps,nextState){
+//     console.log(nextState)
+//     return(
+//       true
+//     )
+
+//   }
+  
+//   componentWillUnmount(){
+//     console.log("khatam")
+//   }
+
+//   componentDidUpdate(){
+//     console.log("component updated")
+//     // console.log(prevState)
+//   }
+
+
+//   render(){
+//     console.log("render is callled")
+//     return(
+//       <>
+//         <h1>ram g</h1>
+//         {this.state.counter}
+//         <button onClick={()=>{this.setState({counter:this.state.counter+1})}}>btn</button>
+//       </>
+//     )
+//   }
+// }
+
+// ! 8
+
+// export default function Practice({fun}){
+//   // let name = "sonu"
+//   return(
+//     <>
+//       <h1>ram g {fun(name)}</h1>
+//     </>
+//   )
+// }
+// export default function Practice({fun}) {
+//   console.log(fun)
+
+//   const [value,setvalue] = useState("sonu")
+
+//   let funn =()=>{
+//     fun(value)
+//   }
+
+//   return (
+//     <div>
+//       <h1>lifting state up</h1>
+//       <button onClick={funn}>btn</button>
+//     </div>
+//   )
+// }
+
+
+// ! 9
+
+// export default function Practice(){
+//   return(
+//     <>
+//       <h1>ram g // high order com</h1>
+//       <p>jay ho</p>
+//     </>
+//   )
+// }
+
+// ! 10
+
+// export default function Practice(){
+//   const [data,setData] = useState(0)
+
+//   let handleBtn = ()=>{
+//     setData((prevState)=>{
+//       console.log(prevState)
+//       return data+1
+//     })
+//   }
+
+
+//   return(
+//     <>
+//       <h1>ram</h1>
+//       {data}
+//       <button onClick={()=>{handleBtn()}}>btn</button>
+//     </>
+//   )
+// }
+
+// ! 11
+
+// import React from 'react'
+
+// function Practice({counter}) {
+//   const previous = useRef()
+//   useEffect(()=>{
+//     previous.current = counter
+//   })
+//   let previousValue = previous.current
+ 
+//   return (
+//     <div>
+//       <h1>jay shri ram</h1>
+//       <p>{counter}</p>
+//       <p> previous value : -{previousValue}</p>
+      
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 12
 
 

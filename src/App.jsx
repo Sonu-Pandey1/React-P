@@ -9,6 +9,29 @@ import Practice from './Component/Practice'
 
 function App() {
 
+    const [counter,setCounter] = useState(0)
+
+    // let fun = (a)=>{
+    //     console.log(a)
+    // }
+
+    // let HOCRed = ({com})=>{
+    //     return(
+    //         <>
+    //             <div style={{backgroundColor:"red"}}>{com}</div>
+    //         </>
+    //     )
+    // }
+
+    // let HOCBlue = ({com})=>{
+    //     return(
+    //         <>
+    //            {data? <div style={{backgroundColor:"blue"}}>{com}</div>:""}
+    //         </>
+    //     )
+    // }
+
+
     return (
         <>
 {/* //! notebook Questions ----------
@@ -206,17 +229,32 @@ function App() {
             {/* //todo--- pc/ Logicial Questions  */}
 
             {/* //! 1 example of classs based componenrt  props,stste,defalut props ,propstype ? */}
+                {/* <Practice name={"ram"}/> */}
             {/* //! 2 example of Function based component, use of use-state props, props in destrustred way and also as pass a spread oprator way obj ? */}
+            {/* <Practice name ="ram"/> */}
             {/* //! 3 hide and show h1 on click ? */}
+            {/* <Practice/> */}
             {/* //! 4 toggle h1 on click ?  */}
+            {/* <Practice/> */}
             {/* //! 5 get the data from form ? */}
+            {/* <Practice/> */}
             {/* //! 6 basic form validition ? */}
             {/* //! 7 explain life cycle methods and is method ? */}
+            {/* {data?<Practice subCounter = {5}/>:""}
+            <button onClick={()=>{setdata(!data)}}>delete</button> */}
             {/* //! 8 lifting state / send data  child components to parent component ? */}
+            {/* <Practice fun={fun}/>
+            <button onClick={()=>{fun()}}>btn parent </button> */}
             {/* //! 9 explain high order component with example ? */}
-            {/* //! 10 get previous state in function based component with example ? */}            
+            {/* <HOCRed com = {<Practice/>}/>
+            <HOCBlue com = {<Practice/>}/> */}
+            {/* //! 10 get previous state in function based component with example ? */}   
+            {/* <Practice/>          */}
             {/* //! 11 previous props in function based component with example ? */}
+            {/* <Practice counter = {counter}/>
+            <button onClick={()=>{setCounter(counter+1)}}>btn parent</button> */}
             {/* //! 12 state with object means that state main object pas karne par issue is that whole object are chnage when we change only one property so avoide this we use spard oprator ? */}
+            <Practice/>
             {/* //! 13 explain hook and there types with example use state , use effect ,  use ref , use layouteffect custome hook ,use memo ,  use context , use callback ,   ? */}
 
            
