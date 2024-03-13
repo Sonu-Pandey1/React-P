@@ -5,7 +5,7 @@
 import { Component, useContext, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 // import { decrement, increment } from "../Reducers";
-import {increment,decrement} from "../Reducerss"
+// import {increment,decrement} from "../Reducerss"
 // import { useDispatch, useSelector } from "react-redux";
 // import { useDispatch, useSelector } from "react-redux";
 // import { stateContext } from "../App";
@@ -1305,7 +1305,7 @@ import { counterContext } from "../context/counterContext";
 //     switch(action.type){
 //       case "INCREMENT":
 //         return state+1;
-      
+
 //       case "DECREMENT":
 //         return state-1
 
@@ -1316,78 +1316,78 @@ import { counterContext } from "../context/counterContext";
 //   }
 
 // function Practice() {
-  //! use state -c
-  //! use effect -c
-  // useEffect(()=>{
-  //   console.log("component render")
-  // })
-  //! use ref -c 
-  // let inputRef = useRef()
-  // let inputHndller = ()=>{
-  //   inputRef.current.style.backgroundColor = "red"
-  //   inputRef.current.style.border = "3px solid green"
-  // }
-  // ! use layout effect -c
-  // useLayoutEffect(()=>{
-  //   console.log("render before component render")
-  // })
-  // ! use memo -c
-  // const [count1, setCount1] = useState(0)
-  // const [count2, setCount2] = useState(10)
-  // let counter1Hnadler = () => {
-  //   console.log("counter 1 clicked")
-  //   setCount1(count1 + 1)
-  // }
+//! use state -c
+//! use effect -c
+// useEffect(()=>{
+//   console.log("component render")
+// })
+//! use ref -c 
+// let inputRef = useRef()
+// let inputHndller = ()=>{
+//   inputRef.current.style.backgroundColor = "red"
+//   inputRef.current.style.border = "3px solid green"
+// }
+// ! use layout effect -c
+// useLayoutEffect(()=>{
+//   console.log("render before component render")
+// })
+// ! use memo -c
+// const [count1, setCount1] = useState(0)
+// const [count2, setCount2] = useState(10)
+// let counter1Hnadler = () => {
+//   console.log("counter 1 clicked")
+//   setCount1(count1 + 1)
+// }
 
-  // let counterHnadler = useMemo(() => {
-  //   console.log("count clicked")
-  //   return count1 * 2
-  // }, [count1])
+// let counterHnadler = useMemo(() => {
+//   console.log("count clicked")
+//   return count1 * 2
+// }, [count1])
 
 
-  // let counter2Hnadler = () => {
-  //   console.log("count 2 clicked")
-  //   setCount2(count2 + 1)
-  // }
+// let counter2Hnadler = () => {
+//   console.log("count 2 clicked")
+//   setCount2(count2 + 1)
+// }
 
-  // ! use callback-nc
-  // ! custom hook -c
-  // const [counter,increment,decrement] = useCustomHook()
-  // let g = counter
-  // console.log(g)
- 
-  // ! use reducer -c
-  // const [state,dispatch]  = useReducer(reducer,initialState)
+// ! use callback-nc
+// ! custom hook -c
+// const [counter,increment,decrement] = useCustomHook()
+// let g = counter
+// console.log(g)
 
-  
-
-  // ! use context -c
-  // const counter = useContext(counterContext)
-  // const {state,dispatch} = useContext(counterContext)
+// ! use reducer -c
+// const [state,dispatch]  = useReducer(reducer,initialState)
 
 
 
-  // return (
-  //   <div>
-      {/* <h1>jay shri ram</h1> */}
-      {/* <p>{counter}</p> */}
-      {/* <p>{state}</p> */}
-      {/* <p> {custom()}</p> */}
-      {/* <p>count 1---{count1}</p> */}
-      {/* <p>{counterHnadler}</p> */}
-      {/* <p>count 2 ----{count2}</p>
+// ! use context -c
+// const counter = useContext(counterContext)
+// const {state,dispatch} = useContext(counterContext)
+
+
+
+// return (
+//   <div>
+{/* <h1>jay shri ram</h1> */ }
+{/* <p>{counter}</p> */ }
+{/* <p>{state}</p> */ }
+{/* <p> {custom()}</p> */ }
+{/* <p>count 1---{count1}</p> */ }
+{/* <p>{counterHnadler}</p> */ }
+{/* <p>count 2 ----{count2}</p>
      
       {/* <input ref={inputRef} type="text" placeholder="name" />
       <button onClick={inputHndller}>btn</button> */}
-      {/* <p>{counter}</p> */}
-      {/* <button onClick={()=>{dispatch({type:"increment"})}}>+</button>
+{/* <p>{counter}</p> */ }
+{/* <button onClick={()=>{dispatch({type:"increment"})}}>+</button>
       <button onClick={()=>{dispatch({type:"decrement"})}}>-</button> */}
-      {/* <button onClick={decrement}>-</button> */}
-    {/* </div> */}
-  {/* )
+{/* <button onClick={decrement}>-</button> */ }
+{/* </div> */ }
+{/* )
 } */}
 
-{/* export default Practice */}
+{/* export default Practice */ }
 
 // ! 14
 
@@ -1445,4 +1445,333 @@ import { counterContext } from "../context/counterContext";
 // }
 
 // export default Practice
+
+
+// 12/03/2024
+
+//! 1 
+
+
+// export default class Practice extends Component{
+//   constructor(){
+//     super();
+//     this.state={
+//       count:0,
+//     }
+//   }
+
+//   render(){
+//     // console.log()
+//     return(
+//       <>
+//         <h1>ram g {this.props.cont}</h1>
+//         <p>{this.state.count}</p>
+//         <button onClick={()=>{this.setState({count:this.state.count+1})}}>btn</button>
+//       </>
+//     )
+//   }
+// }
+
+//! 2
+
+// export default function Practice ({cont}){
+//   let [counter,setCounter] = useState(0);
+
+//   return(
+//     <>
+//       <h1>ram g {cont}</h1>
+//       <p>{counter}</p>
+//       <button onClick={()=>{setCounter(counter = counter+1)}}>btn</button>
+//     </>
+//   )
+// }
+
+//! 3
+
+// // import React from 'react'
+
+// function Practice() {
+//   let [show,setShow] = useState(true)
+
+
+//   let handelShow = ()=>{
+//     setShow(show = true)
+
+//   }
+//   let handelHide = ()=>{
+//     setShow(show = false)
+
+//   }
+//   return (
+//     <div>
+//       {show===true ? <h1>show & hide h1 on click </h1>:""}
+//       <button onClick={handelShow}>show</button>
+//       <button onClick={handelHide}>hide</button>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 4 
+
+// import React from 'react'
+
+// function Practice() {
+//   let [data,setData] = useState(true)
+//   return (
+//     <div>
+//       {data?<h1>ram g </h1>:""}
+//       <button onClick={()=>{setData(!data)}}>toggle</button>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 5
+
+// import React from 'react'
+
+// function Practice() {
+  // let [name,setName] = useState("")
+  // let [password,setPassword] = useState("")
+//   let [data,setData] = useState({name:"",password:""})
+
+//   let handleSubmit =(e)=>{
+//     e.preventDefault();
+//     console.log(data.name)
+//     console.log(data.password)
+    
+
+//   }
+//   return (
+//     <div>
+//       <h1> radharani g ki jay</h1>
+//       <form onSubmit={handleSubmit}>
+//         <input type="text" placeholder="enter you name" onChange={(e)=>{setData({...data, name:e.target.value})}} /><br />
+//         <input type="text" placeholder="enter you password"onChange={(e)=>{setData({...data ,password:e.target.value})}} /><br /><br />
+//         <button type="submit">submit</button><br /><br />
+//       </form>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 7
+
+// class Practice extends Component{
+//   constructor(){
+//     console.log("constructor is called")
+//     super();
+//     this.state={
+//       count:0,
+
+//     }
+//   }
+
+// static getDerivedStateFromProps(props,state){
+//   console.log("getDrivedstate =frompropss is called")
+//   console.log(state)
+//   console.log(props)
+//   state = props
+//   console.log(state)
+//   console.log(props)
+//   return(
+//     null
+//   )
+// }
+
+
+
+// componentDidMount(){
+//   console.log("component mounted")
+// }
+
+// shouldComponentUpdate(nextProps,nextState){
+//   console.log("should component is called ") 
+//   if(nextState.count<10){
+//     console.log(nextState)
+//     return (
+//       true
+//       )
+//   }
+// }
+
+// getSnapshotBeforeUpdate(preProps,preState){
+//   console.log(preState)
+//   if(preState.count<10){
+//     // console.log(preState)
+//     return true
+//   }
+// }
+
+// componentDidUpdate(preProps,preState){
+
+//   console.log("component updated")
+//   console.log(preState)
+// }
+
+// componentWillUnmount(){
+//   console.log("katam")
+// }
+
+
+
+//   render() {
+//     console.log("render is called")
+//     return(
+//       <>
+//         <h1>radharani ki jay</h1>
+//         <p>{this.state.count}</p>
+//         <button onClick={()=>{this.setState({count:this.state.count+1})}}>btn</button>
+//       </>
+//     )
+//   }
+// }
+
+// export default Practice;
+
+//! 8
+
+// import React from 'react'
+
+// function Practice({fun}) {
+//   let name = "sonu"
+
+//   let handlSubmit = ()=>{
+//     fun(name)
+
+//   }
+//   return (
+//     <div>
+    
+//       <h1> jay shri Krishna </h1>
+//       {/* <p>{fun(name)}</p> */}
+//       <button onClick={handlSubmit}>submit</button>
+
+
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+//! 9 
+
+// import React from 'react'
+
+// function Practice() {
+//   return (
+//     <div>
+//       <h1>bankebihari g ki jay</h1>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 10
+
+// import React from 'react'
+
+// function Practice() {
+//   let [counter,setCounter] =useState=(0)
+
+//   let handleBtn = ()=>{
+//     setCounter(counter=counter+1)
+    
+//   }
+//   return (
+//     <div>
+//       <h1>jay bajrangbali </h1>
+//       <p>{counter}</p>
+//       <button onClick={handleBtn}>btn</button>
+//     </div>
+//   )
+// }
+
+// export default Practice
+// export default function Practice (){
+//   let [counter,setCounter] = useState(0);
+
+//   let handleBtn = ()=>{
+//     setCounter((preval)=>{
+//       console.log(preval)
+//       return counter+1
+//     })
+//   }
+
+//   return(
+//     <>
+//       {/* <h1>ram g {cont}</h1> */}
+//       <p>{counter}</p>
+//       <button onClick={handleBtn}>btn</button>
+//     </>
+//   )
+// }
+
+// ! 11
+
+// import React from 'react'
+
+// function Practice({counter}) {
+//   let lastVal = useRef()
+//   useEffect(()=>{
+//     lastVal.current = counter
+//   })
+//   return (
+//     <div>
+//       <h1>jay shree ram</h1>
+//       <p>{counter}</p>
+//       <p>{lastVal.current}</p>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+// ! 12
+
+// import React from 'react'
+
+// function Practice() {
+//   let [data,setData] = useState({name:"sonu",password:"pandey"})
+//   return (
+//     <div>
+//       <h1>ram</h1>
+//       <input type="text" placeholder=" name" onChange={(e)=>{setData({...data ,name:e.target.value})}} /><br/>
+//       <input type="text" placeholder=" password"  onChange={(e)=>{setData({...data ,password:e.target.value})}} />
+//       <p>{data.name}</p>
+//       <p>{data.password}</p>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+
+// ! 13
+
+// import React from 'react'
+
+function Practice() {
+  return (
+    <div>
+    <h1> jai siyaram</h1>
+      
+    </div>
+  )
+}
+
+export default Practice
+
+
+
+
+
+
+
+
 
