@@ -18,7 +18,7 @@ import { useDispatch, useSelector } from "react-redux";
 import custom from "../Component/useCustom"
 import useCustomHook from "../Component/useCustom";
 import { counterContext } from "../context/counterContext";
-import useCustom2 from "./useCustom2";
+// import useCustom2 from "./useCustom2";
 // import counterContext from "../App"
 // import {counterContext} from "../App"
 // 
