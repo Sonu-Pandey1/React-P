@@ -18,6 +18,7 @@ import { useDispatch, useSelector } from "react-redux";
 import custom from "../Component/useCustom"
 import useCustomHook from "../Component/useCustom";
 import { counterContext } from "../context/counterContext";
+import useCustom2 from "./useCustom2";
 // import counterContext from "../App"
 // import {counterContext} from "../App"
 // 
@@ -1757,9 +1758,55 @@ import { counterContext } from "../context/counterContext";
 // import React from 'react'
 
 function Practice() {
+  // let inputRef = useRef()
+
+  // useLayoutEffect(()=>{
+  //   console.log("layout effect called")
+  // })
+
+  // useEffect(()=>{
+  //   console.log("component mounted")
+  // })
+
+  //! useMemo 
+  // let [count1,setCount1] = useState(0)
+  // let [count2,setCount2] = useState(0)
+
+  // let btnHandller1 = ()=>{
+  //   setCount1(count1=count1+1)
+  // }
+
+  // let btnHandller2 = ()=>{
+  //   setCount2(count2=count2+1)
+  // }
+
+  // let btnHandller3 = useMemo(()=>{
+  //   console.log("btnhasler 3 is called")
+  //   return count1*5
+  // },[count1])
+
+  // ! use ref
+  // let btnHandller = ()=>{
+  //   console.log("btn clicked")
+  //   inputRef.current.style.backgroundColor = "red"
+  // }
+
+  // ! use reducer
+
+// ! custom component 
+
+// ! use context
+
   return (
     <div>
     <h1> jai siyaram</h1>
+    {/* <input ref={inputRef} type="text" placeholder="name" /><br /> */}
+    {/* <button onClick={()=>{btnHandller()}}>btn</button> */}
+    {/* <p>{count1}</p>
+    <p>{count2}</p>
+    <p>{btnHandller3}</p>
+    <button onClick={()=>{btnHandller1()}}>counter 1</button>
+    <button onClick={()=>{btnHandller2()}}>counter 2</button> */}
       
     </div>
   )

@@ -301,7 +301,7 @@ function App() {
             {/* <Practice counter = {counter}/> */}
             {/* //! 12 state with object means that state main object pas karne par issue is that whole object are chnage when we change only one property so avoide this we use spard oprator ? */}
             {/* <Practice/> */}
-            {/* //! 13 explain hook and there types with example use state , use effect ,  use ref , use layouteffect custome hook ,use memo ,  use context , use callback ,   ? */}
+            {/* //! 13 explain hook and there types with example use state , use effect ,  use ref , use layouteffect ,use callback ,use memo , custome hook   use context ,useReducer   ? */}
             {/* <counterContext.Provider value={{state:state,dispatch:dispatch}}>
             <Practice/>
             </counterContext.Provider> */}
