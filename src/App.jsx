@@ -25,10 +25,18 @@ import Practice from "./Component/Practice";
 //     }
 
 // }
-// let counterContext = createContext()
+// let counterContext77 = createContext()
 
+
+
+
+// let ccContext = createContext()
+
+
+// export  {ccContext}
 function App() {
-    let [counter,setCounter] = useState(0)
+    // let [counter,setCounter] = useState(0)
+    // let [state,dispatch] = useReducer(reducer,initialState)
     // const [state,dispatch] = useReducer(reducer,initialState)
 
     // let HOCRed = ({cmd})=>{
@@ -305,42 +313,14 @@ function App() {
             {/* <counterContext.Provider value={{state:state,dispatch:dispatch}}>
             <Practice/>
             </counterContext.Provider> */}
-            <Practice/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            {/* <counterContext77.Provider value={{state:state,dispatch:dispatch}}>
+                <Practice/>
+            </counterContext77.Provider> */}
+            
+        
             {/* //! 14 useReducer + UseCOntext Example */}
+
+            {/* <Practice/> */}
 
             {/* <Practice/> */}
 
@@ -353,11 +333,12 @@ function App() {
             {/* <Practice/> */}
 
             {/*//! 15 implimint redux  */}
+            {/* window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() */}
 
             {/* <Practice/> */}
 
             {/*//! 16 implimint redux toolkit */}
-            {/* <Practice/> */}
+            <Practice/>
 
             {/* //! 17 setup routing togather nexted routing and dyanamic routing ? */}
             {/* //! 18 use of seacrchParams and setsearchParamas hooks in rrd // for give the output on the basics of what will serch/query in the url ? */}
@@ -373,8 +354,8 @@ function App() {
 }
 
 export default App;
-// export const [counterContext]
-// export {counterContext}
+// export const [counterContext77]
+// export {counterContext77}
 
 // {//! 3  time statrt /}
 // retake 11/03/2024

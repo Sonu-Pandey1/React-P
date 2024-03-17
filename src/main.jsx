@@ -1,6 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import CounterContext2 from './context/CounterContext2.jsx'
+// import UserContext from './context/UserContext.jsx'
+import UserContexttt from './context/UserContext.jsx'
+import { Provider } from 'react-redux'
+// import store from './Store.js'
+import storeeeeee from './Storeeeeeeee.js'
 // import { Provider } from 'react-redux'
 // import store from './store.js'
 // import Storee from './Storee.jsx'
@@ -33,7 +39,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <ThemChangeContextProvider> */}
     {/* <CounterContext> */}
     {/* <Provider store={Storee}> */}
-    <App />
+   {/* <UserContexttt> */}
+   <Provider store={storeeeeee}>
+   <App />
+   </Provider>
+   {/* </UserContexttt> */}
+   
+    
     {/* </Provider> */}
       
     {/* </CounterContext> */}

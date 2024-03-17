@@ -18,9 +18,16 @@ import { useDispatch, useSelector } from "react-redux";
 import custom from "../Component/useCustom"
 import useCustomHook from "../Component/useCustom";
 import { counterContext } from "../context/counterContext";
+import CounterContext2 from "../context/CounterContext2";
+import { decrement, increment } from "../Redux/Actions/incDec";
+// import changeTheNumber from "../Redux/Reducers/Reducer";
+// import UserContext, { userContext } from "../context/UserContext";
+// import UserContexttt from "../context/UserContext";
+// import { ccContext } from "../App";
 // import useCustom2 from "./useCustom2";
 // import counterContext from "../App"
 // import {counterContext} from "../App"
+  // import { counterContext77 } from "../App";
 // 
 
 //  export default class Peactice extends Component{
@@ -1756,8 +1763,9 @@ import { counterContext } from "../context/counterContext";
 // ! 13
 
 // import React from 'react'
+// import {counterContext77} from "../App"
 
-function Practice() {
+// function Practice() {
   // let inputRef = useRef()
 
   // useLayoutEffect(()=>{
@@ -1791,15 +1799,41 @@ function Practice() {
   //   inputRef.current.style.backgroundColor = "red"
   // }
 
-  // ! use reducer
 
-// ! custom component 
+// ! custom hook
+
+// let [counter,increment,decrement] = useCustomHook();
+
 
 // ! use context
 
-  return (
-    <div>
-    <h1> jai siyaram</h1>
+// let [state,dispatch] = useContext(counterContext77)
+// let {state,dispatch}  = useContext(counterContext77)
+
+
+
+
+  // ! use reducer
+
+  // let reducer = (state,action)=>{
+  //   switch(action.type){
+  //     case "increment": return state = state+1;
+  //     case "decrement": return state = state-1;
+  //     default : return state;
+  //   }
+    
+  // }
+  // let initialState = 0;
+
+  // const [state,dispatch] = useReducer(reducer,initialState);
+
+
+
+
+
+  // return (
+  //   <div>
+  //   <h1> jai siyaram</h1>
     {/* <input ref={inputRef} type="text" placeholder="name" /><br /> */}
     {/* <button onClick={()=>{btnHandller()}}>btn</button> */}
     {/* <p>{count1}</p>
@@ -1807,12 +1841,64 @@ function Practice() {
     <p>{btnHandller3}</p>
     <button onClick={()=>{btnHandller1()}}>counter 1</button>
     <button onClick={()=>{btnHandller2()}}>counter 2</button> */}
+    
+    {/* <button onClick={()=>{dispatch({type:"Increment"})}}>Increment</button>
+    <button onClick={()=>{dispatch({type:"Decrement"})}}>Decrement</button> */}
+    {/* <p>{state}</p>
+    <button onClick={()=>{dispatch({type:"increment"})}}>increment</button>
+    <button onClick={()=>{dispatch({type:"decrement"})}}>decrement</button> */}
+
+{/*    
       
     </div>
   )
 }
 
+export default Practice */}
+
+//! 14
+
+// import React from 'react'
+
+
+
+
+// function Practice() {
+// let {state,dispatch}  = useContext(userContext)
+// // console.log(state)
+//   return (
+//     <div>
+//       <h1>jay siyaram</h1>
+//       <p>{state}</p>
+//     <button onClick={()=>{dispatch({type:"increment"})}}>increment</button>
+//     <button onClick={()=>{dispatch({type:"decrement"})}}>decrement</button>
+//       {/* <p>{context}</p> */}
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+
+// ! 15
+
+// import React from 'react'
+
+function Practice() {
+  let myValue = useSelector((state)=> state.changeTheNumber)
+  let dispatch = useDispatch()
+  return (
+    <div>
+      <h1>jay radhey</h1>
+      <p>{myValue}</p>
+      <button onClick={()=> dispatch(increment())}>increment</button>
+      <button onClick={()=> dispatch(decrement())}>decrement</button>
+    </div>
+  )
+}
+
 export default Practice
+
 
 
 
