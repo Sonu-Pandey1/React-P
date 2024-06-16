@@ -1884,20 +1884,24 @@ export default Practice */}
 
 // import React from 'react'
 
-function Practice() {
-  let myValue = useSelector((state)=> state.changeTheNumber)
-  let dispatch = useDispatch()
-  return (
-    <div>
-      <h1>jay radhey</h1>
-      <p>{myValue}</p>
-      <button onClick={()=> dispatch(increment())}>increment</button>
-      <button onClick={()=> dispatch(decrement())}>decrement</button>
-    </div>
-  )
-}
+// function Practice() {
+//   let myValue = useSelector((state)=> state.changeTheNumber)
+//   let dispatch = useDispatch()
+//   return (
+//     <div>
+//       <h1>jay radhey</h1>
+//       <p>{myValue}</p>
+//       <button onClick={()=> dispatch(increment())}>increment</button>
+//       <button onClick={()=> dispatch(decrement())}>decrement</button>
+//     </div>
+//   )
+// }
 
-export default Practice
+// export default Practice
+
+// ! 1
+
+
 
 
 

@@ -338,7 +338,7 @@ function App() {
             {/* <Practice/> */}
 
             {/*//! 16 implimint redux toolkit */}
-            <Practice/>
+            {/* <Practice/> */}
 
             {/* //! 17 setup routing togather nexted routing and dyanamic routing ? */}
             {/* //! 18 use of seacrchParams and setsearchParamas hooks in rrd // for give the output on the basics of what will serch/query in the url ? */}
